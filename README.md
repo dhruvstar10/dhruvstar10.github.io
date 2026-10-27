@@ -68,18 +68,26 @@ Configuration follows the [official Astro GitHub Pages guide](https://docs.astro
 
 ## Connect dhruvg.net
 
-The configuration defaults to `https://dhruvg.net` and root-relative hosting.
-No DNS or GoDaddy changes have been made.
+Connected October 26, 2026. `dhruvg.net` is verified on the GitHub account and
+set as the repository's Pages custom domain; the `SITE_URL` Actions variable is
+`https://dhruvg.net`, and HTTPS is enforced. `www.dhruvg.net`, `http://` and
+`dhruvstar10.github.io` all redirect to `https://dhruvg.net/`.
 
-When the preview is verified, configure `dhruvg.net` as the custom domain in
-GitHub Pages, set `SITE_URL=https://dhruvg.net` and `BASE_PATH=/`, and rebuild.
-Follow GitHub's current custom-domain instructions to verify domain ownership
-and enter the required apex A/AAAA and optional `www` CNAME records in GoDaddy.
-Keep the domain registered at GoDaddy; preserve MX, TXT, and other unrelated
-records. Enable HTTPS once GitHub provisions the certificate.
+DNS stays at GoDaddy (nameservers unchanged). Website records:
 
-Do not change nameservers or cancel domain registration to accomplish this.
-Check current provider instructions before changing records:
+| Type | Name | Value |
+| --- | --- | --- |
+| A | @ | 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 |
+| AAAA | @ | 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153, 2606:50c0:8003::153 |
+| CNAME | www | dhruvstar10.github.io |
+| TXT | _github-pages-challenge-dhruvstar10 | GitHub domain verification; keep it |
+
+The MX, SPF TXT, `_outlook` TXT and `autodiscover` CNAME records are for
+Outlook email; leave them alone. `_acme-challenge` is a leftover from the old
+WordPress hosting and can be removed once that hosting is cancelled.
+
+If the certificate ever stops renewing, remove and re-add the custom domain in
+Settings → Pages to make GitHub re-check DNS. Reference:
 https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 
 ## Prepublication review

@@ -33,7 +33,9 @@ The user chose a public repository on GitHub Free named
 `dhruvstar10/dhruvstar10.github.io` (the user site, not `dhruvg.net`), so the
 site serves from the domain root and project repos with Pages turned on appear
 at `dhruvg.net/<repo-name>` once the custom domain is set. `BASE_PATH` is `/`
-throughout; only `SITE_URL` changes when the domain is connected.
+throughout. The site is live at `https://dhruvg.net` (connected October 26,
+2026; HTTPS enforced; `SITE_URL` Actions variable set). See `README.md` for the
+DNS records. Pushes to `main` deploy to the live site.
 
 The user supplied a screenshot of the current site and its introduction:
 “I’m a product leader passionate about AI, product strategy, and building tools
