@@ -83,8 +83,8 @@ DNS stays at GoDaddy (nameservers unchanged). Website records:
 | TXT | _github-pages-challenge-dhruvstar10 | GitHub domain verification; keep it |
 
 The MX, SPF TXT, `_outlook` TXT and `autodiscover` CNAME records are for
-Outlook email; leave them alone. `_acme-challenge` is a leftover from the old
-WordPress hosting and can be removed once that hosting is cancelled.
+Outlook email; leave them alone. The old WordPress hosting has been cancelled
+and its records removed.
 
 If the certificate ever stops renewing, remove and re-add the custom domain in
 Settings → Pages to make GitHub re-check DNS. Reference:
