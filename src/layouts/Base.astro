@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+import { site } from '../data/site';
+import { path } from '../lib/paths';
+interface Props { title?: string; description?: string; noindex?: boolean }
+const { title, description = site.description, noindex = false } = Astro.props;
+const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — Writing & building`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const active = (route: string) => Astro.url.pathname === path(route);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f7f6f0" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={path('favicon.svg')} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={site.name} />
+    <meta name="twitter:card" content="summary" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="shell">
+      <header class="header">
+        <a class="wordmark" href={path()} aria-label="Dhruv Goel, home">dhruvg<span>.</span></a>
+        <nav aria-label="Main navigation">
+          <a href={path('blog/')} aria-current={active('blog/') ? 'page' : undefined}>Writing</a>
+          <a href={path('about/')} aria-current={active('about/') ? 'page' : undefined}>About</a>
+          <a class="nav-external" href={site.substack}>Substack <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+      <main id="main"><slot /></main>
+      <footer>
+        <div><a class="footer-name" href={path()}>Dhruv Goel</a><span class="footer-note">A little corner of the internet.</span></div>
+        <div class="footer-links"><a href={site.github}>GitHub ↗</a><a href={site.substack}>Substack ↗</a></div>
+      </footer>
+    </div>
+  </body>
+</html>
