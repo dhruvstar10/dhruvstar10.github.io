@@ -31,7 +31,9 @@ may still be an older Node. Put it first on your `PATH` before running npm:
 - `src/pages/projects/index.astro`: project showcase.
 - `src/data/writing.ts`: external article titles, summaries, URLs, sources, and dates.
 - `src/components/ArticleList.astro`: reusable external article index.
-- `public/social-card.svg`: editable source for `social-card.png`, used in link previews.
+- `scripts/social-card.html`: source for `public/social-card.png`, the link-preview
+  image, styled like the home page. The regenerate command is in the file; after
+  changing it, refresh LinkedIn's cache at https://www.linkedin.com/post-inspector/.
 - `src/pages/index.astro`: homepage.
 - `src/pages/blog/index.astro`: writing index and Substack link.
 - `src/pages/about.astro`: short introduction; extend with approved biography.
