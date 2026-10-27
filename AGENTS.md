@@ -16,9 +16,9 @@ site or repository.
 ## Current implementation context
 
 The user subsequently confirmed GitHub username `dhruvstar10` and Substack
-profile `https://substack.com/@godhruv`. They have no projects to showcase yet.
-The initial implementation therefore focuses on Home, Writing, and About;
-omit Projects from navigation until real projects are supplied. Use the confirmed
+profile `https://substack.com/@godhruv`. The user has now approved featuring the public Auzar project at
+`https://github.com/dhruvstar10/auzar`. Home, Writing, Projects, and About are
+the current site structure. Use the confirmed
 profile rather than assuming the older publication URL is correct.
 
 Astro source and a GitHub Pages workflow now exist. See `README.md` for commands
@@ -40,6 +40,38 @@ DNS records. Pushes to `main` deploy to the live site.
 The user supplied a screenshot of the current site and its introduction:
 “I’m a product leader passionate about AI, product strategy, and building tools
 that empower everyone.” This is approved source material for the biography.
+
+## Current revision
+
+The user reviewed the local draft and explicitly requested committing and
+pushing these changes on October 26, 2026.
+LinkedIn is confirmed as `https://www.linkedin.com/in/godhruv/` and is linked
+from the site; the user plans to link back from LinkedIn themselves.
+The current draft revises Home, Writing, and About, adds a shared external
+article list and social-sharing image, and keeps Writing active on article pages.
+Latest visual feedback: use a neutral white/charcoal theme, remove arrow icons
+and decorative placeholder artwork, and streamline repeated links. External
+profile links now appear once per page in the footer: LinkedIn, GitHub, and
+the Substack publication homepage. Causes links appear on About. Home uses the
+Hallucinating Touchdowns artwork from Part 1 via its original published image
+URL. Copy it into local assets once accessible; the user-provided shared Google
+Drive folder is currently blocked by filesystem permissions.
+The user supplied three Substack article URLs and confirmed they are Parts 1–3
+in the supplied order. They are recorded in `src/data/writing.ts`, with a series
+summary based on the author’s public LinkedIn introduction. Chrome successfully opened Part 1: its date is November 22, 2025 and subtitle
+is “An experiment with AI, statistics and football.” These are now recorded.
+Other dates and individual summaries remain omitted pending verification.
+The standard publication `/subscribe` URL is configured but needs browser
+verification before publishing.
+The session can build, but cannot bind a local preview port (`EPERM`) or launch
+Chrome. Preview must currently be started from the user's own terminal.
+
+Auzar’s public README was reviewed in Chrome on October 26, 2026. It is an
+experimental Swift/iOS prototype using Meta Ray-Ban glasses for live voice,
+camera snapshots, and label reading with vision/OCR. Guided repair procedures
+and manual lookup are roadmap items, not current capabilities. There is no
+verified public demo URL; link to the repository. Project copy is curated in
+`src/data/projects.ts`, shown on Home and `/projects/`.
 
 ## Confirmed user context
 

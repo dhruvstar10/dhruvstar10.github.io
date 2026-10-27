@@ -1,8 +1,19 @@
 ---
 import Base from '../layouts/Base.astro';
-import { site } from '../data/site';
 ---
-<Base title="About" description="Meet Dhruv Goel and find his writing and GitHub profile.">
-  <section class="page-heading"><p class="eyebrow">A QUICK INTRODUCTION</p><h1>Hello, I’m Dhruv<span class="accent">.</span></h1><p class="intro">I’m a product leader passionate about AI, product strategy, and building tools that empower everyone.</p></section>
-  <section class="about-grid"><div class="monogram" aria-hidden="true">dg.</div><div class="about-copy"><h2>A place to connect the dots.</h2><p>I started writing on Substack and am picking it up again. This site brings that writing together with the projects I’ll share along the way.</p><p>For now, you’ll find my first piece on Substack. You can also find me on GitHub.</p><div class="inline-links"><a class="text-link" href={site.substack}>Substack ↗</a><a class="text-link" href={site.github}>GitHub ↗</a></div></div></section>
+<Base title="About" description="Dhruv Goel is a product leader interested in AI, product strategy, and building useful tools.">
+  <section class="page-heading"><h1>A little about me.</h1></section>
+  <div class="about-copy">
+    <p class="intro">I’m Dhruv Goel, a product leader passionate about AI, product strategy, and building tools that empower everyone.</p>
+    <p>I’m interested in what technology makes possible and how to turn that possibility into something people can use.</p>
+    <p>Writing helps me work through those ideas. My fantasy football series began with a league’s unusual scoring rules and became an experiment in using AI to think through decisions.</p>
+    <p>You can find my professional background on LinkedIn and my code on GitHub, linked below.</p>
+  </div>
+  <section class="causes" aria-labelledby="causes-heading">
+    <h2 id="causes-heading">Causes</h2>
+    <ul>
+      <li><a href="https://hearttocaretanzania.org/">Heart to Care Tanzania</a></li>
+      <li><a href="https://www.gefusa.org/">Global Education Foundation</a></li>
+    </ul>
+  </section>
 </Base>

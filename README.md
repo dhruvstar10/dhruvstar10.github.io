@@ -1,9 +1,10 @@
 # dhruvg.net
 
 Dhruv Goel's personal website: Astro, static output, and GitHub Pages.
-The initial site focuses on writing and links to the confirmed Substack profile:
-https://substack.com/@godhruv. Projects are intentionally omitted until there is
-something to showcase. The original article URL and title still need verification.
+The site focuses on writing and links directly to the author-confirmed three-part
+“Juicing with AI in Fantasy Football” series on https://dhruvgblog.substack.com.
+The public Auzar prototype is featured on Home and the Projects page. Part 1’s date and subtitle were verified in Chrome. Other article dates remain
+omitted until verified.
 
 ## Run locally
 
@@ -25,7 +26,12 @@ may still be an older Node. Put it first on your `PATH` before running npm:
 
 ## Content
 
-- `src/data/site.ts`: name, description, and verified profile links.
+- `src/data/site.ts`: name, description, verified profile links, and signup URL.
+- `src/data/projects.ts`: curated project descriptions, capabilities, and repository links.
+- `src/pages/projects/index.astro`: project showcase.
+- `src/data/writing.ts`: external article titles, summaries, URLs, sources, and dates.
+- `src/components/ArticleList.astro`: reusable external article index.
+- `public/social-card.svg`: editable source for `social-card.png`, used in link previews.
 - `src/pages/index.astro`: homepage.
 - `src/pages/blog/index.astro`: writing index and Substack link.
 - `src/pages/about.astro`: short introduction; extend with approved biography.
@@ -93,7 +99,9 @@ https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pag
 ## Prepublication review
 
 - The introduction is taken from the user-supplied current-site screenshot.
-- Replace the general Substack link with the direct article link when verified.
+- Confirm the Substack signup route and all three external article links in a browser.
+- The featured image currently uses its original published image URL from Part 1;
+  replace it with a local copy when the shared artwork folder becomes accessible.
 - Run `npm run check` and `npm run build` successfully.
 - Check navigation, focus indicators, and layout at mobile and desktop widths.
 - Confirm canonical URLs, sitemap, and assets for the selected deployment URL.
