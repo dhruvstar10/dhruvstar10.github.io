@@ -3,8 +3,8 @@
 Dhruv Goel's personal website: Astro, static output, and GitHub Pages.
 The site focuses on writing and links directly to the author-confirmed three-part
 “Juicing with AI in Fantasy Football” series on https://dhruvgblog.substack.com.
-The public Auzar prototype is featured on Home and the Projects page. Part 1’s date and subtitle were verified in Chrome. Other article dates remain
-omitted until verified.
+The public Auzar prototype is featured on Home and the Projects page. All three
+parts' dates and subtitles come from the published Substack posts.
 
 ## Run locally
 
@@ -26,7 +26,7 @@ may still be an older Node. Put it first on your `PATH` before running npm:
 
 ## Content
 
-- `src/data/site.ts`: name, description, verified profile links, and signup URL.
+- `src/data/site.ts`: name, description, and verified profile links.
 - `src/data/projects.ts`: curated project descriptions, capabilities, and repository links.
 - `src/pages/projects/index.astro`: project showcase.
 - `src/data/writing.ts`: external article titles, summaries, URLs, sources, and dates.
@@ -99,7 +99,6 @@ https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pag
 ## Prepublication review
 
 - The introduction is taken from the user-supplied current-site screenshot.
-- Confirm the Substack signup route and all three external article links in a browser.
 - The featured image currently uses its original published image URL from Part 1;
   replace it with a local copy when the shared artwork folder becomes accessible.
 - Run `npm run check` and `npm run build` successfully.

@@ -1,4 +1,4 @@
-/** Links and part order confirmed by the author. Dates omitted until verified. */
+/** Links and part order confirmed by the author; dates and subtitles from each Substack post. */
 export interface ExternalArticle {
   title: string;
   description?: string;
@@ -26,10 +26,14 @@ export const externalArticles: ExternalArticle[] = [
     title: 'Juicing with AI in Fantasy Football: Part 2',
     url: 'https://dhruvgblog.substack.com/p/juicing-with-ai-in-fantasy-football-f4e',
     source: 'Substack',
+    date: '2025-12-28',
+    description: 'Discovering an exploit',
   },
   {
     title: 'Juicing with AI in Fantasy Football: Part 3',
     url: 'https://dhruvgblog.substack.com/p/juicing-with-ai-in-fantasy-football-bef',
     source: 'Substack',
+    date: '2026-01-18',
+    description: 'Using AI and data to validate my fantasy football hunch',
   },
 ];

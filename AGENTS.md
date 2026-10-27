@@ -60,9 +60,12 @@ The user supplied three Substack article URLs and confirmed they are Parts 1–3
 in the supplied order. They are recorded in `src/data/writing.ts`, with a series
 summary based on the author’s public LinkedIn introduction. Chrome successfully opened Part 1: its date is November 22, 2025 and subtitle
 is “An experiment with AI, statistics and football.” These are now recorded.
-Other dates and individual summaries remain omitted pending verification.
-The standard publication `/subscribe` URL is configured but needs browser
-verification before publishing.
+Parts 2 and 3 dates and subtitles were taken from the published posts on
+October 26, 2026: December 28, 2025, “Discovering an exploit”; January 18, 2026,
+“Using AI and data to validate my fantasy football hunch.” The user chose the
+Substack publication link (footer) as the way to subscribe; there is no
+separate `/subscribe` link. Home and About use the approved introduction
+wording verbatim.
 The session can build, but cannot bind a local preview port (`EPERM`) or launch
 Chrome. Preview must currently be started from the user's own terminal.
 
