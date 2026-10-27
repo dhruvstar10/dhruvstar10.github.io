@@ -20,7 +20,7 @@ export const externalArticles: ExternalArticle[] = [
     url: 'https://dhruvgblog.substack.com/p/juicing-with-ai-in-fantasy-football',
     source: 'Substack',
     date: '2025-11-22',
-    description: 'An experiment with AI, statistics and football.',
+    description: 'An experiment with AI, statistics and football',
   },
   {
     title: 'Juicing with AI in Fantasy Football: Part 2',
